@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require("express");
 
 const cookieParser = require('cookie-parser');
-const port = process.env.API_SERVER_PORT || 3000;
+const port = process.env.PORT || 3000;
 const { connectToDb } = require('./db.js');
 const { installHandler } = require('./api_handler.js')
 const auth = require('./auth.js');
