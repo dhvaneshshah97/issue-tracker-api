@@ -80,7 +80,7 @@ routes.post('/signin', async (req, res) => {
 });
 
 routes.post('/signout', async (req, res) => {
-    res.clearCookie('jwt');
+    res.cookie('jwt','',{expires: new Date()});
     res.json({ status: 'ok' });
 });
 
